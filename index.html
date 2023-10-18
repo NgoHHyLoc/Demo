@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Assetapp/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Webapp/index.css">
+    <title>Đăng ký tham gia bảo hiểm</title>
+</head>
+
+<body onload="myFunctionbody()" style="margin:0;">
+
+  <div id="loader" class="load-row">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+
+  <div class="thongtin">
+    <div class="khung">
+      <div class="thongtin">
+        <h2> NHẬP THÔNG TIN THAM GIA CHƯƠNG TRÌNH BẢO HIỂM <br> <br> </h2> 
+      <div class="textbox">
+        <!-- Choose a date and enter in input field -->
+        <b class="myInput">*Tên khách hàng: <input type="text" id="myInput" ></b>
+        <span class="message" id = "message1" style="color:red"> </span>
+        <b>*Ngày sinh: <input type=date id = DOB> </b>
+        <span class="message" id = "message2" style="color:red"> </span>
+        <p style="color: rgba(255, 0, 0, 0.723);">(*)Bắt buộc điền</p>
+      </div>
+      </div>
+      
+      
+      <div class="chon">
+        <div class="tieude"><p>Vui lòng chọn chương trình Bảo Hiểm</p></div>
+        <div class="thechon">
+          <div class="coban">  
+            <!-- Cơ Bản -->
+            <button class="nut1" id="myCheck1" onclick="myFunction()">Cơ Bản</button>
+            </div>
+          <div class="nangcao">
+            <!-- Nâng Cao -->
+            <button class="nut1" id="myCheck2" onclick="myFunctionnangcao()">Nâng Cao</button>
+          </div>
+          <div class="uuviet">
+            <!-- Ưu Việt -->
+            <button class="nut1" id="myCheck3" onclick="myFunctionuuviet()">Ưu Việt</button>
+          </div>
+          <div class="toandien">
+              <!-- Toàn Diện -->
+              <button class="nut1" id="myCheck4" onclick="myFunctiontoandien()">Toàn diện</button>
+          </div>
+          <div class="hoanhao">
+              <!-- Hoàn Hảo -->
+              <button class="nut1" id="myCheck5" onclick="myFunctionhoanhao()">Hoàn hảo</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="hienthi">
+    <h3 style="color:32A80F" id="result" ></h3>
+  </div>
+  
+
+
+<!-- align="center" -->
+
+<div class="hienthitt">
+<!-- Cơ Bản -->
+<div  id="coban" style="display:none" class="cb">
+  <p>Đã chọn chương trình Bảo Hiểm Cơ Bản với các quyền lợi sau :</p>
+  <ul>
+    <li>Số tiền bảo hiểm tối đa/năm (*): 125.000.000 VND</li>
+    <li>Phạm vi bảo hiểm (*): Việt Nam</li>
+    <li>Quyền lợi: chỉ áp dụng Điều trị nội trú</li>
+    <li>Được bảo hiểm y tế và được gói Bảo Hiểm Cơ Bản đồng chi tri trả với lựa chọn là 0% hay 15%</li>
+    <li>Ngoài ra còn hưởng các quyền lợi gia hạn phụ sau của gói Bảo Hiểm Cơ Bản: <br>
+        + Được chi trả tiền giường/phòng khi ở 45 ngày/năm tại phòng khám Thường trị giá 700.000 VND và 15 ngày/năm tại phòng khám Khoa chăm sóc đặc biệc (ICU) trị giá 1.000.000 VND. <br>
+        + Đặc biệc gói bảo hiểm sẽ chi trả tiền giường/phòng cho người chăm sóc người được bảo hiểm trong khoảng 20 ngày/năm trị giá 300.000 VND. <br>
+        + Hỗ trợ chi phí chăm sóc y tế tại nhà tối đa 20 ngày/năm trị giá 150.000 VND, chi phí phẫu thuật tối đa 12.000.000 VND cho 1 đợt nằm viện không giới hạn, điều trị tổn thương răng do Tai nạn tối đa 1.000.000 VND cho 1 đợt như vậy là không giới hạn, và còn nhiều quyền lợi đặc biệt khác.<br>
+    </li>
+  </ul>
+</div>
+
+<!-- Nâng Cao -->
+<div  id="nangcao" style="display:none" class="cb">
+  <p>Đã chọn chương trình Bảo Hiểm Nâng Cao với các quyền lợi sau :</p>
+  <ul>
+    <li>Số tiền bảo hiểm tối đa/năm (*): 250.000.000 VND</li>
+    <li>Phạm vi bảo hiểm (*): toàn Châu Á</li>
+    <li>Quyền lợi: được áp dụng cả Điều trị nội trú và ngoại trú</li>
+    <li>Được bảo hiểm y tế và được gói Bảo Hiểm Nâng Cao đồng chi tri trả với lựa chọn là 0% hay 15%</li>
+    <li>Ngoài ra còn hưởng các quyền lợi gia hạn phụ sau của gói Bảo Hiểm Nâng Cao: <br>
+        + Được chi trả tiền giường/phòng khi ở 45 ngày/năm tại phòng khám Thường trị giá 1.400.000 VND và 15 ngày/năm tại phòng khám Khoa chăm sóc đặc biệc (ICU) trị giá 2.000.000 VND. <br>
+        + Đặc biệc gói bảo hiểm sẽ chi trả tiền giường/phòng cho người chăm sóc người được bảo hiểm trong khoảng 20 ngày/năm trị giá 500.000 VND. <br>
+        + Hỗ trợ chi phí chăm sóc y tế tại nhà tối đa 20 ngày/năm trị giá 250.000 VND, chi phí phẫu thuật tối đa 25.000.000 VND cho 1 đợt nằm viện không giới hạn, điều trị tổn thương răng do Tai nạn tối đa 2.000.000 VND cho 1 đợt như vậy là không giới hạn, và còn nhiều quyền lợi đặc biệt khác.<br>
+         <!-- <a href="http://localhost:8080/wordpress/chuong-trinh-bao-hiem/"target="_blank">Xem thêm tại đây...</a> -->
+    </li>
+  </ul>
+</div>
+
+<!-- Ưu Việt -->
+<div  id="uuviet" style="display:none" class="cb">
+  <p>Đã chọn chương trình Bảo Hiểm Ưu Việt với các quyền lợi sau :</p>
+  <ul>
+    <li>Số tiền bảo hiểm tối đa/năm (*): 500.000.000 VND</li>
+    <li>Phạm vi bảo hiểm (*): Toàn Cầu</li>
+    <li>Quyền lợi: được áp dụng cả Điều trị nội trú và ngoại trú</li>
+    <li>Được bảo hiểm y tế và được gói Bảo Hiểm Ưu Việt đồng chi tri trả với lựa chọn là 0% hay 15%</li>
+    <li>Ngoài ra còn hưởng các quyền lợi gia hạn phụ sau của gói Bảo Hiểm Ưu Việt: <br>
+        + Được chi trả tiền giường/phòng khi ở 45 ngày/năm tại phòng khám Thường trị giá 2.500.000 VND và 15 ngày/năm tại phòng khám Khoa chăm sóc đặc biệc (ICU) trị giá 3.000.000 VND. <br>
+        + Đặc biệc gói bảo hiểm sẽ chi trả tiền giường/phòng cho người chăm sóc người được bảo hiểm trong khoảng 20 ngày/năm trị giá 750.000 VND. <br>
+        + Hỗ trợ chi phí chăm sóc y tế tại nhà tối đa 20 ngày/năm trị giá 350.000 VND, chi phí phẫu thuật tối đa 50.000.000 VND cho 1 đợt nằm viện không giới hạn, điều trị tổn thương răng do Tai nạn tối đa 4.000.000 VND cho 1 đợt như vậy là không giới hạn, và còn nhiều quyền lợi đặc biệt khác.<br> 
+    </li>
+  </ul>
+</div>
+
+<!-- Toàn Diện -->
+<div  id="toandien" style="display:none" class="cb">
+  <p>Đã chọn chương trình Bảo Hiểm Toàn Diện với các quyền lợi sau :</p>
+  <ul>
+    <li>Số tiền bảo hiểm tối đa/năm (*): 1.000.000.000 VND</li>
+    <li>Phạm vi bảo hiểm (*): Toàn Cầu</li>
+    <li>Quyền lợi: được áp dụng cả Điều trị nội trú và ngoại trú</li>
+    <li>Được bảo hiểm y tế và được gói Bảo Hiểm Toàn Diện đồng chi tri trả với lựa chọn là 0% hay 15%</li>
+    <li>Ngoài ra còn hưởng các quyền lợi gia hạn phụ sau của gói Bảo Hiểm Toàn Diện: <br>
+        + Được chi trả tiền giường/phòng khi ở 45 ngày/năm tại phòng khám Thường trị giá 3.000.000 VND và 15 ngày/năm tại phòng khám Khoa chăm sóc đặc biệc (ICU) trị giá 5.000.000 VND. <br>
+        + Đặc biệc gói bảo hiểm sẽ chi trả tiền giường/phòng cho người chăm sóc người được bảo hiểm trong khoảng 20 ngày/năm trị giá 1.500.000 VND. <br>
+        + Hỗ trợ chi phí chăm sóc y tế tại nhà tối đa 20 ngày/năm trị giá 700.000 VND, chi phí phẫu thuật tối đa 80.000.000 VND cho 1 đợt nằm viện không giới hạn, điều trị tổn thương răng do Tai nạn tối đa 7.000.000 VND cho 1 đợt như vậy là không giới hạn, và còn nhiều quyền lợi đặc biệt khác. <br>
+    </li>
+  </ul>
+</div>
+
+<!-- Hoàn Hảo -->
+<div  id="hoanhao" style="display:none" class="cb">
+  <p>Đã chọn chương trình Bảo Hiểm Hoàn Hảo với các quyền lợi sau :</p>
+  <ul>
+    <li>Số tiền bảo hiểm tối đa/năm (*): 1.500.000.000 VND</li>
+    <li>Phạm vi bảo hiểm (*): Toàn Cầu</li>
+    <li>Quyền lợi: được áp dụng cả Điều trị nội trú và ngoại trú</li>
+    <li>Được bảo hiểm y tế và được gói Bảo Hiểm Hoàn Hảo đồng chi tri trả với lựa chọn là 0%</li>
+    <li>Ngoài ra còn hưởng các quyền lợi gia hạn phụ sau của gói Bảo Hiểm Hoàn Hảo: <br>
+        + Được chi trả tiền giường/phòng khi ở 45 ngày/năm tại phòng khám Thường trị giá 6.000.000 VND và 15 ngày/năm tại phòng khám Khoa chăm sóc đặc biệc (ICU) trị giá 10.000.000 VND. <br>
+        + Đặc biệc gói bảo hiểm sẽ chi trả tiền giường/phòng cho người chăm sóc người được bảo hiểm trong khoảng 20 ngày/năm trị giá 3.000.000 VND. <br>
+        + Hỗ trợ chi phí chăm sóc y tế tại nhà tối đa 20 ngày/năm trị giá 1.000.000 VND, chi phí phẫu thuật tối đa 100.000.000 VND cho 1 đợt nằm viện không giới hạn, điều trị tổn thương răng do Tai nạn tối đa 12.000.000 VND cho 1 đợt như vậy là không giới hạn, và còn nhiều quyền lợi đặc biệt khác.
+    </li>
+    <li>Quyền lợi bảo hiểm mở rộng của Bảo Hiểm Hoàn Hảo: QUYỀN LỢI CHĂM SÓC NHA KHOA VÀ QUYỀN LỢI CHĂM SÓC THAI SẢN</li>
+    <li>QUYỀN LỢI CHĂM SÓC NHA KHOA: <br>
+        + Số tiền bảo hiểm tối đa/năm (*): 15.000.000 VND <br>
+        + Phạm vi bảo hiểm (*): Việt Nam <br>
+        + Được bảo hiểm y tế và được gói Bảo Hiểm Hoàn Hảo đồng chi tri trả với lựa chọn là 0%. <br>
+        + Chi phí điều trị nha khoa cho 1 lần thăm khám: 5.000.000 VND. <br>
+        + Cạo vôi răng trong 1 năm được tài trợ tối đa: 1.500.000 VND. <br>
+    </li>
+    <li>QUYỀN LỢI CHĂM SÓC THAI SẢN: <br>
+        + Số tiền bảo hiểm tối đa/năm (*): 30.000.000 VND cho sinh thường, 50.000.000 VND cho sinh mổ<br>
+        + Phạm vi bảo hiểm (*): Việt Nam <br>
+        + Được bảo hiểm y tế và được gói Bảo Hiểm Hoàn Hảo đồng chi tri trả với lựa chọn là 0%. <br>
+        + Được chi trả tiền giường/phòng khi ở 45 ngày/năm tại phòng khám Thường trị giá 6.000.000 VND và 30 ngày/năm tại phòng khám Khoa chăm sóc đặc biệc (ICU) trị giá 30.000.000 VND. <br>
+        + Kiểm tra tiền sản và xét nghiệm tối đa 3 lần/năm trị giá 3.000.000 VND. <br>
+        + Chi phí dưỡng nhi tối đa 15 ngày/năm trị giá 5.000.000 VND. <br>
+        + Hỗ trợ chi phí sinh nở 1 năm: Theo chi chí y tế thực tế. <br>
+        + Điều trị cấp cứu thai sản do Tai nạn 1 năm trị giá 20.000.000 VND. <br>
+        (**) Quyền lợi này chỉ áp dụng cho Người được bảo hiểm là nữ trong độ tuổi từ 18 đến 55 tuổi và có Tuổi tham gia không quá 50 tuổi.
+    </li>
+  </ul>
+</div>
+</div>
+
+
+
+
+<script>
+  // Cơ Bản
+  function myFunction() {
+    var userinput = document.getElementById("DOB").value;
+    var dob = new Date(userinput);
+    var user = document.getElementById("myInput").value;
+    if(userinput=="" || user=="") {
+      document.getElementById("message1").innerHTML = "**Vui lòng điền đầy đủ họ tên!";  
+      document.getElementById("message2").innerHTML = "**Vui lòng nhập ngày sinh!"; 
+      return false; 
+    } else {
+      document.getElementById("coban").style.display = "block";
+      document.getElementById("result").style.display = "block";
+      document.getElementById("nangcao").style.display = "none";
+      document.getElementById("uuviet").style.display = "none";
+      document.getElementById("toandien").style.display = "none";
+      document.getElementById("hoanhao").style.display = "none";
+
+      document.getElementById("message1").style.display = "none";
+      document.getElementById("message2").style.display = "none";
+    
+    var month_diff = Date.now() - dob.getTime();
+    
+    var age_dt = new Date(month_diff); 
+    
+    var year = age_dt.getUTCFullYear();
+    
+    var age = Math.abs(year - 1970);
+    
+    return document.getElementById("result").innerHTML = 'Kính chào quý khách '+user + ' tuổi ' + age;
+    }
+}
+
+
+// Nâng cao
+function myFunctionnangcao() {
+    var userinput = document.getElementById("DOB").value;
+    var dob = new Date(userinput);
+    var user = document.getElementById("myInput").value;
+    if(userinput=="" || user=="") {
+      document.getElementById("message1").innerHTML = "**Vui lòng điền đầy đủ họ tên!";  
+      document.getElementById("message2").innerHTML = "**Vui lòng nhập ngày sinh!"; 
+      return false; 
+    } else {
+
+      document.getElementById("nangcao").style.display = "block";
+      document.getElementById("result").style.display = "block";
+      document.getElementById("coban").style.display = "none";
+      document.getElementById("uuviet").style.display = "none";
+      document.getElementById("toandien").style.display = "none";
+      document.getElementById("hoanhao").style.display = "none";
+
+      document.getElementById("message1").style.display = "none";
+      document.getElementById("message2").style.display = "none";
+    
+    var month_diff = Date.now() - dob.getTime();
+    
+    var age_dt = new Date(month_diff); 
+    
+    var year = age_dt.getUTCFullYear();
+    
+    var age = Math.abs(year - 1970);
+    
+    return document.getElementById("result").innerHTML = 'Kính chào quý khách '+user + ' tuổi ' + age;
+    }
+}
+
+// Ưu Việt
+function myFunctionuuviet() {
+    var userinput = document.getElementById("DOB").value;
+    var dob = new Date(userinput);
+    var user = document.getElementById("myInput").value;
+    if(userinput=="" || user=="") {
+      document.getElementById("message1").innerHTML = "**Vui lòng điền đầy đủ họ tên!";  
+      document.getElementById("message2").innerHTML = "**Vui lòng nhập ngày sinh!"; 
+      return false; 
+    } else {
+
+      document.getElementById("uuviet").style.display = "block";
+      document.getElementById("result").style.display = "block";
+      document.getElementById("coban").style.display = "none";
+      document.getElementById("nangcao").style.display = "none";
+      document.getElementById("toandien").style.display = "none";
+      document.getElementById("hoanhao").style.display = "none";
+
+      document.getElementById("message1").style.display = "none";
+      document.getElementById("message2").style.display = "none";
+    
+    var month_diff = Date.now() - dob.getTime();
+    
+    var age_dt = new Date(month_diff); 
+    
+    var year = age_dt.getUTCFullYear();
+    
+    var age = Math.abs(year - 1970);
+    
+    return document.getElementById("result").innerHTML = 'Kính chào quý khách '+user + ' tuổi ' + age;
+    }
+}
+
+// Toàn Diện
+function myFunctiontoandien() {
+    var userinput = document.getElementById("DOB").value;
+    var dob = new Date(userinput);
+    var user = document.getElementById("myInput").value;
+    if(userinput=="" || user=="") {
+      document.getElementById("message1").innerHTML = "**Vui lòng điền đầy đủ họ tên!";  
+      document.getElementById("message2").innerHTML = "**Vui lòng nhập ngày sinh!"; 
+      return false; 
+    } else {
+
+      document.getElementById("toandien").style.display = "block";
+      document.getElementById("result").style.display = "block";
+      document.getElementById("coban").style.display = "none";
+      document.getElementById("nangcao").style.display = "none";
+      document.getElementById("uuviet").style.display = "none";
+      document.getElementById("hoanhao").style.display = "none";
+
+      document.getElementById("message1").style.display = "none";
+      document.getElementById("message2").style.display = "none";
+    
+    var month_diff = Date.now() - dob.getTime();
+    
+    var age_dt = new Date(month_diff); 
+    
+    var year = age_dt.getUTCFullYear();
+    
+    var age = Math.abs(year - 1970);
+    
+    return document.getElementById("result").innerHTML = 'Kính chào quý khách '+user + ' tuổi ' + age;
+    }
+}
+
+// Hoàn Hảo
+function myFunctionhoanhao() {
+    var userinput = document.getElementById("DOB").value;
+    var dob = new Date(userinput);
+    var user = document.getElementById("myInput").value;
+    if(userinput=="" || user=="") {
+      document.getElementById("message1").innerHTML = "**Vui lòng điền đầy đủ họ tên!";  
+      document.getElementById("message2").innerHTML = "**Vui lòng nhập ngày sinh!"; 
+      return false; 
+    } else {
+
+      document.getElementById("hoanhao").style.display = "block";
+      document.getElementById("result").style.display = "block";
+      document.getElementById("coban").style.display = "none";
+      document.getElementById("nangcao").style.display = "none";
+      document.getElementById("uuviet").style.display = "none";
+      document.getElementById("toandien").style.display = "none";
+
+      document.getElementById("message1").style.display = "none";
+      document.getElementById("message2").style.display = "none";
+    
+    var month_diff = Date.now() - dob.getTime();
+    
+    var age_dt = new Date(month_diff); 
+    
+    var year = age_dt.getUTCFullYear();
+    
+    var age = Math.abs(year - 1970);
+    
+    return document.getElementById("result").innerHTML = 'Kính chào quý khách '+user + ' tuổi ' + age;
+    }
+}
+
+
+var myVar;
+    function myFunctionbody() {
+    myVar = setTimeout(showPage, 3000);
+    }
+    function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+    }
+
+</script>
+
+
+
+        <!-- <div class="the">
+            <div class="the__icon"><i class="fa-brands fa-windows"></i></div>
+            <div class="tieude">Hello</div>
+            <div class="nd">A parameter defines the number of characters</div>
+            <div class="thoat"><i class="fa-solid fa-xmark"></i></div>
+        </div> -->
+
+
+
+
+</body>
+</html>
